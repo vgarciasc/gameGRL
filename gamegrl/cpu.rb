@@ -24,8 +24,22 @@ module GameGRL
             @a = @b = @c = @d = @e = @f = @h = @l = @f = 0x00
             @pc = @sp = 0x0000
             @m = 0
-            @a = 14
-            @b = 15
+        end
+
+        def af
+            (@a << 8) | @f
+        end
+
+        def bc
+            (@b << 8) | @c
+        end
+
+        def de
+            (@d << 8) | @e
+        end
+
+        def hl
+            (@h << 8) | @l
         end
 
         def print_registers
