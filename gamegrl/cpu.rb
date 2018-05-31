@@ -30,16 +30,36 @@ module GameGRL
             (@a << 8) | @f
         end
 
+        def af=(value)
+            @a = (value >> 8) & 0xFF
+            @f = value & 0xFF
+        end
+
         def bc
             (@b << 8) | @c
+        end
+
+        def bc=(value)
+            @b = (value >> 8) & 0xFF
+            @c = value & 0xFF
         end
 
         def de
             (@d << 8) | @e
         end
 
+        def de=(value)
+            @d = (value >> 8) & 0xFF
+            @e = value & 0xFF
+        end
+
         def hl
             (@h << 8) | @l
+        end
+
+        def hl=(value)
+            @h = (value >> 8) & 0xFF
+            @l = value & 0xFF
         end
 
         def print_registers
